@@ -1,5 +1,5 @@
 {
-  "name": "node-fs-example",
+  "name": "fs-example",
   "version": "1.0.0",
   "description": "Practice fs using a simple application",
   "main": "index.js",
@@ -10,5 +10,13 @@
   "license": "ISC",
   "devDependencies": {
     "jest": "^26.6.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shwethaa-rajesh/node-fs-example.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shwethaa-rajesh/node-fs-example/issues"
+  },
+  "homepage": "https://github.com/shwethaa-rajesh/node-fs-example#readme"
 }
