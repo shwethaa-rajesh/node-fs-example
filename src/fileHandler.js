@@ -1,5 +1,7 @@
 const path = require('path');
-const { promisifyReadFile, promisifyReadDirectory, promisifyAppendFile,promisifyWriteFile } = require('./utils/fileUtilities');
+const {
+  promisifyReadFile, promisifyReadDirectory, promisifyAppendFile, promisifyWriteFile,
+} = require('./utils/fileUtilities');
 
 const readAndFilterFiles = async (directoryPath, filterCharacter = null) => {
   const directoryFilenames = await promisifyReadDirectory(directoryPath);
@@ -12,16 +14,16 @@ const readAndFilterFiles = async (directoryPath, filterCharacter = null) => {
   }), {});
   return allFilesContent;
 };
- (async () => {
-    console.log(await promisifyAppendFile('./seed/fruits.txt','\r\nWatermelon'));
-  })();
-  (async () => {
-    console.log(await promisifyWriteFile('./seed/beverages.txt','Tea\r\nCoffee'));
-  })();
-  
-  (async () => {
-    console.log(await readAndFilterFiles('./seed'));
-  })();
+(async () => {
+  console.log(await promisifyAppendFile('./seed/fruits.txt', '\r\nWatermelon'));
+})();
+(async () => {
+  console.log(await promisifyWriteFile('./seed/beverages.txt', 'Tea\r\nCoffee'));
+})();
+
+(async () => {
+  console.log(await readAndFilterFiles('./seed'));
+})();
 module.exports = {
   readAndFilterFiles,
 };
